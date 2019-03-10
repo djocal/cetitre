@@ -1,0 +1,49 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#cadreAutourVisuelFip {
+    float: left;
+    margin-right: 30px;
+    max-width: 200px;
+    width: 30%;
+    border-style: solid;
+    border-width: thin;
+}
+
+#encours\.visuelfip {
+    width: 100%;
+}
+
+.en_retrait {
+    font-size: smaller; color: midnightblue;
+}
+
+.bien_visible {
+    font-size: larger;
+}
+
+.invalide {
+    border-color: red;
+}
+
+.valide {
+    border-color: black;
+}
+
+#ajouterFavori {
+    margin-left: 30px;
+}
+
+#ajouterFavori i {
+    font-size: larger;
+    color: gold;
+}
+
+#ajouterFavori.avant span.avant, #ajouterFavori.apres span.apres {
+    display: inline;
+}
+
+#ajouterFavori.avant span.apres, #ajouterFavori.apres span.avant {
+    display: none;
+}

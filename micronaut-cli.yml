@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: cetitre
+---
+testFramework: spock
+sourceLanguage: groovy

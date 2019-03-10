@@ -1,0 +1,46 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          rel="stylesheet">
+    <link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+<form action="/favoris/index.html" method="get">
+
+    <a href="/bonjour">Bonjour</a>
+    <input id="auditeur" name="auditeur" placeholder="votre pseudo 2+ car" type="text"/>,
+    voilà ce qui se joue sur FIP
+    <input type="submit" value="Tous vos favoris"/>
+</form>
+<div id="cadreAutourVisuelFip">
+    <img id="encours.visuelfip"
+         src="fip-quadri-filet.png"/>
+</div>
+<div>
+    <p class="bien_visible">
+        EN CE MOMENT:
+    </p>
+    <p class="bien_visible" id="encours">
+        <span id="encours.titreAuteurs">(bougez pas je me renseigne...)</span>
+        <a id="encours.lienyoutube" href=""><i class="fab fa-youtube"></i></a>
+    </p>
+    <p class="avant" id="ajouterFavori">
+        <span class="avant">
+            <a onclick="return ajouteAuFavoris();">
+                <i class="far fa-heart"></i>&nbsp;J'adooore&nbsp;!
+            </a>
+        </span>
+        <span class="apres">
+            Ajouté !&nbsp;<i class="fas fa-heart"></i>
+        </span>
+    </p>
+    <button onclick="recuperePlaylist();">Mettre à jour</button>
+
+</div>
+<script src="utils/utils.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
