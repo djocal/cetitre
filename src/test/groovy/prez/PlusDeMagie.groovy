@@ -17,7 +17,7 @@ class PlusDeMagie {
      *
      */
 
-    BonjourController dabord_les_bases_du_serveur // = dis bonjour!
+    BonjourController dabord_les_bases_du_serveur // = dis bonjour! http://localhost:8080/bonjour
 
     BonjourControllerIntegrationSpec un_test_dintegration_a_la_mimine
 
