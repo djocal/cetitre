@@ -29,6 +29,8 @@ class FavoriClient {
         }
     }
 
+
+
     Single<List<Favori>> lesRecupererTousPour(String auditeur) {
         pgPool.rxPreparedQuery('select * from favori where auditeur = $1 order by ajoute_le', of(auditeur))
                 .map { PgRowSet rowSet ->
@@ -48,9 +50,13 @@ class FavoriClient {
         }
     }
 
+
+
+
     Completable ajouterPour(String auditeur, Morceau morceauFavori, PgTransaction transactionParente = null) {
         log.debug ">ajouterPour $auditeur transaction auto ${transactionParente == null}"
         PgTransaction transactionEffective
+
         (transactionParente ? Single.just(transactionParente) : pgPool.rxBegin()
         ).flatMap { PgTransaction transaction ->
             transactionEffective = transaction
@@ -77,8 +83,6 @@ class FavoriClient {
         }
     }
 
-// article de blog: piloter les transactions plus élégamment, de manière fonctionnelle ? avec Using ?
-// article de blog: traiter les erreurs sql de violation de contrainte ?
 
     @Inject
     PgPool pgPool

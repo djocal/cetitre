@@ -5,12 +5,10 @@ import cetitre.fip.ConvertisseurLiveMeta
 import cetitre.fip.FipClient
 import cetitre.fip.ReponseLiveMeta
 import groovy.transform.CompileStatic
-import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
-import io.reactivex.Completable
 import io.reactivex.Maybe
 import io.reactivex.Single
 
@@ -21,6 +19,8 @@ import javax.inject.Inject
 class PrincipalController {
 
     /**
+     * http://localhost:8080/fip
+     *
      * @return le morceau en cours, précédents et uivants de Radio Fip
      */
     @Get(uri = '/fip')
@@ -29,6 +29,13 @@ class PrincipalController {
             return convertisseurLiveMeta.versPlayList(reponseLiveMeta)
         }
     }
+
+
+
+
+
+
+
 
     @Post(uri = "/{auditeur}/favoris")
     Single<String> ajouterAuxFavoris(String auditeur, @Body Morceau morceau) {

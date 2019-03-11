@@ -27,10 +27,10 @@ dependencies {
     compile "io.micronaut:micronaut-runtime-groovy"
     compile "io.micronaut:micronaut-validation"
     compileOnly "io.micronaut:micronaut-inject-groovy"
-    compile "io.micronaut:micronaut-management"
-    compile 'io.micronaut.configuration:micronaut-postgres-reactive'
+    compile 'io.micronaut.configuration:micronaut-postgres-reactive' // https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html
+    compile "io.micronaut:micronaut-management" // https://docs.micronaut.io/latest/guide/index.html#management
     runtime "ch.qos.logback:logback-classic:1.2.3"
-    testCompile "io.micronaut.test:micronaut-test-spock:1.0.2"
+    testCompile "io.micronaut.test:micronaut-test-spock:1.0.2" // https://micronaut-projects.github.io/micronaut-test/latest/guide/index.html#spock
     testCompile "io.micronaut:micronaut-inject-groovy"
 }
 

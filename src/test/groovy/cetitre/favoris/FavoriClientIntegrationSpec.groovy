@@ -6,7 +6,6 @@ import groovy.util.logging.Slf4j
 import io.micronaut.test.annotation.MicronautTest
 import io.reactiverse.reactivex.pgclient.PgPool
 import io.reactiverse.reactivex.pgclient.PgTransaction
-import io.reactivex.Completable
 import spock.lang.Specification
 
 import javax.inject.Inject
@@ -23,6 +22,7 @@ class FavoriClientIntegrationSpec extends Specification {
         todos.size() > 0
     }
 
+
     void "récupérer les favoris de zoo"() {
         given:
         List<Favori> favoris = favoriClient.lesRecupererTousPour('zoo').blockingGet()
@@ -31,6 +31,7 @@ class FavoriClientIntegrationSpec extends Specification {
         favoris.size() == 1
         favoris[0].morceau.titre == 'EL NINO'
     }
+
 
     void "ajouter un favori à djocal"() {
         given:

@@ -13,8 +13,11 @@ import javax.inject.Singleton
 @CompileStatic
 @Singleton
 class FipManualClient {
+
     /**
-     * @return https://www.fip.fr/livemeta/7
+     * la playlist de https://www.fip.fr/
+     *
+     * @return JSON of https://www.fip.fr/livemeta/7
      */
     Maybe<Object> morceauxLive() {
         Flowable reponse = httpClient.retrieve(HttpRequest.GET('/'),
